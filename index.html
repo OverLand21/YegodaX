@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AnomlyRust Loading</title>
+    <style>
+        body {
+            background-color: #0d0d0d;
+            margin: 0;
+            padding: 0;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-image: url('bg.png');
+            background-size: cover;
+            background-position: center;
+        }
+        .logo {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+        .message {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .queue {
+            font-size: 1.2em;
+            color: #ffaa00;
+        }
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <img src="logo.png" alt="AnomlyRust Logo" class="logo">
+    <div class="message">Thank you for joining AnomlyRust.<br>You will be teleported into game shortly.</div>
+    <div class="queue">Queue Position: Loading...</div>
+    <audio autoplay loop>
+        <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_8e3fc1322f.mp3?filename=ambient-intro-145276.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</body>
+</html>
