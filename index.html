@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AnomlyRust Loading</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+      background: url('bg.png') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .fade-in {
+      animation: fadeIn 2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .logo {
+      width: 200px;
+      margin-bottom: 30px;
+    }
+    .message {
+      font-size: 1.7em;
+      margin-bottom: 15px;
+      background: rgba(0,0,0,0.6);
+      padding: 15px 30px;
+      border-radius: 10px;
+    }
+    .queue {
+      font-size: 1.3em;
+      color: #ffcc00;
+      margin-bottom: 20px;
+    }
+    .progress-bar {
+      width: 300px;
+      height: 10px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 5px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+    .progress {
+      height: 100%;
+      width: 0;
+      background: #ff6600;
+      animation: loadBar 10s infinite;
+    }
+    @keyframes loadBar {
+      0% { width: 0; }
+      50% { width: 100%; }
+      100% { width: 0; }
+    }
+    .vip-button {
+      font-size: 1.1em;
+      padding: 10px 25px;
+      background: #ff6600;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+    .vip-button:hover {
+      background: #cc5200;
+    }
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body class="fade-in">
+  <img src="logo.png" alt="AnomlyRust Logo" class="logo fade-in">
+  <div class="message fade-in">Thank you for joining AnomlyRust.<br>You will be teleported into the game shortly.</div>
+  <div class="queue fade-in">Queue Position: Loading...</div>
+  <div class="progress-bar"><div class="progress"></div></div>
+  <a href="vip.html" class="vip-button fade-in">Buy VIP</a>
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_8e3fc1322f.mp3?filename=ambient-intro-145276.mp3" type="audio/mpeg">
+  </audio>
+</body>
+</html>
